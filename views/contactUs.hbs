@@ -1,0 +1,105 @@
+<main role="main">
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-3 project-sb">
+                    <div class="mb-4">
+                        <div class="my-2">
+                            <img width="200px" src="/images/me.jpg" alt="">
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="mb-4">
+                        <h4>Social Profiles</h4>
+                        <div class="my-2">
+                            <a class="fa fa-linkedin"></a>
+                            <span class="badge badge-warning">JavaScript</span>
+                            <span class="badge badge-primary">CSS</span>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="mb-4">
+                        <h1>Related Projects</h1>
+                        <div class="my-2">
+                            <a href="#">JS Console</a>
+                        </div>
+                        <div class="my-2">
+                            <a href="#">Number Guessing Game</a>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="mb-4">
+                        <h1>Resources</h1>
+                        <div class="my-2">
+                            <a href="#">JS Console</a>
+                        </div>
+                        <div class="my-2">
+                            <a href="#">Number Guessing Game</a>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-md-9">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/contact">Contact</a></li>
+                            {{!-- <li class="breadcrumb-item active" aria-current="page">Contact</li> --}}
+                        </ol>
+                    </nav>
+
+                    <p id="resp"></p>
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label for="firstName">Name</label>
+                                <input type="text" name="name" class="form-control" id="firstName" placeholder="Name"
+                                    value="" required>
+                                <div class="invalid-feedback">
+                                    Valid name is required.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email">Email <span class="text-muted"></span></label>
+                            <input type="email" name="email" class="form-control" id="email"
+                                placeholder="you@example.com">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for shipping updates.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mobile">Mobile</label>
+                            <input type="number" name="mobile" class="form-control" id="mobile" placeholder="Mobile No."
+                                value="" required>
+                            <div class="invalid-feedback">
+                                Valid Mobile Number is required.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message">Your Message</label>
+                            <textarea type="text" class="form-control" name="description" id="message"
+                                placeholder="Description" rows="3" required></textarea>
+                        </div>
+
+
+
+                        <hr class="mb-4">
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<script src="/js/app.js"></script>

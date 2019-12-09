@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const middlewares = require('./middlewares/appMiddleware');
+const routes = require('./routes/index');
 const app = express();
 
 
@@ -10,23 +11,16 @@ hbs.registerPartials(__dirname+'/views/partials');
 
 
 app.use(middlewares.logger);
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
 app.use(express.static(__dirname+'/static'));
 
-app.get('/', (req,res)=>{
-    res.render('index');
-});
-
-app.get('/projects', (req,res) => {
-    res.render('projectList');
-});
-
-app.get('/blogs', (req,res) => {
-    res.render('blog');
-});
-
-app.get('/project-detail', (req,res) => {
-    res.render('projectDetail');
-});
+app.get('/', routes.index);
+app.get('/projects', routes.projects);
+app.get('/blogs', routes.blogs);
+app.get('/project-detail', routes.projectList);
+app.get('/contact', routes.contact);
+app.post('/contact', routes.doContact);
 
 
 app.use(middlewares.notFound);

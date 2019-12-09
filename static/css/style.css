@@ -5,3 +5,8 @@
 .breadcrumb {
     background-color: #f8f9fa;
 }
+
+.active {
+    color: white !important;
+    border-bottom: 2px solid white;
+}
